@@ -1,0 +1,324 @@
+@charset "UTF-8";
+
+body {
+  font-family: "游ゴシック Medium","Yu Gothic Medium","游ゴシック体",YuGothic,sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover img {
+  opacity: 0.8;/* カーソルが画像の上に乗ったら画像が透ける MAX１*/
+}
+
+.menu_but {
+  width: 130px;
+  margin: 0 auto 60px auto;
+  text-align: center;
+}
+.menu_but p {
+  font-size: 18px;
+}
+.menu_but:hover{
+  cursor: pointer;
+  opacity: 0.8;
+  color: #fff;
+}
+
+/* ヘッダー */
+.header {
+  width: 1200;
+  height: 130px;
+  margin: 0 auto;/* 上下、左右 */
+  background-color: #fff;
+}
+.header_logo {
+  width: 225px;
+  height: auto;
+  float: left;
+  margin-left: 20px;
+}
+.header_logo img {
+  width: 100%;
+}
+.header_cart {
+  height: 70px;
+  margin: 30px 50px 0 0;
+  float: right;
+}
+.header_cart img {
+  width: 50px;
+}
+.header_cart p {
+  font-size: 19px;
+  color: #ff3333;
+}
+
+/* サイトイメージ画像スライド */
+.item_image {
+  width: auto;
+  height: 430px;
+  margin: 0 auto 120px auto;
+}
+.item_image img {
+  width: 100%;
+  border-radius:2px;/*気持ち丸く*/
+}
+/*スライドショー*/
+#slideshow {
+  position: relative;
+  height: 480px;
+}
+#slideshow IMG {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  opacity: 0.0;
+}
+#slideshow IMG.active {
+  z-index: 10;
+  opacity: 1.0;
+}
+#slideshow IMG.last-active {
+  z-index: 9;
+}
+
+
+.title {
+  margin: 60px auto 50px auto; /*上右下左*/
+  text-align: center;/*タイトルを中心にする*/
+  font-size: 40px;
+  letter-spacing: 8px;
+  font-weight: bold;
+}
+
+/* お店表示 */
+.box_wrapper {
+  margin: 50px 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #fff;
+}
+.box_shop {
+  width: 240px;
+  margin: 40px 10px;/*上　右　下　左*/
+}
+.box_shop img {
+  width: 100%;
+}
+.box_wrapper::after {
+display: block;
+content:"";
+width: 540px;
+}
+
+/* Eater説明 */
+.text_box {
+  width: 670px;
+  height: 200px;
+  margin: 150px auto;
+}
+.text_box h2 {
+  text-align: center;/*文字中心にする*/
+  font-size: 30px;
+  letter-spacing: 6px;
+  font-weight: bold;
+}
+.text_box p {
+  font-size: 18px;
+}
+
+
+/* 各店のメニュー表示 */
+.menu_wrapper {
+  margin: 0 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #ffffef;
+}
+.box_items{
+  width: 240px;
+  margin: 40px 10px;
+}
+.box_items img {
+  width: 100%;
+}
+.box_items h3 {
+  font-size: 17px;
+  margin: 0;
+  padding: 0;
+}
+.box_items p {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+.box_items a {
+  color: #333;
+}
+.box_items a:hover {
+  color: #666;
+}
+.menu_wrapper::after {
+display: block;
+content:"";
+width: 250px;
+}
+
+/* 料理表示 */
+.item {
+  width: 1000px;
+  margin: 0 auto;
+  overflow: auto;
+  border-radius:9px;
+  background-color: #ffffef;
+}
+.item img {
+  width: 350px;
+  float: left;
+  margin: 30px;
+}
+.item h1 {
+  font-size: 38px;
+  font-weight: bold;
+}
+/* サイズセレクト */
+.size_select {
+  width: 300px;
+  height: 60px;
+  margin: 50px 0 30px 60px;
+  font-size: 16px;
+}
+.submit_btn {
+  width: 300px;
+  height: 60px;
+  margin: 0 0 30px 60px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  background-color: #6666FF;
+}
+.submit_btn:hover {
+  opacity: 0.9;
+}
+.item a {
+  font-size:  20px;
+}
+
+
+/* cartページ */
+.cart {
+  width: 1000px;
+  margin: 0 auto 150px auto;
+  overflow: auto;
+  border-radius:9px;
+  background-color: #ffffef;
+}
+.cart_text {
+  width: 670px;
+  margin: 60 auto;
+}
+.cart_text p {
+  font-size: 24px;
+}
+.cartprice_cartdelete {
+  margin-bottom: 50px;
+  border-top: 2px dotted #333;
+  display: flex;
+}
+.cart_price {
+  width: 300px;
+  margin-left: 500px;
+}
+.cart_price p {
+  font-size: 35px;
+  text-align: right;
+  margin-right: 30px;
+}
+.cart_delete {
+  width: 220px;
+  height: 50px;
+  margin: 35px 0 30px 10px;
+}
+.delete_btn {
+  width: 200px;
+  height: 50px;
+  margin: 0 0 30px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  background-color: #DDDDDD;
+}
+.cart_delete:hover {
+  opacity: 0.7;
+}
+.cart_btn {
+  width: 600px;
+  margin: 30 auto;
+}
+.cart_btn1 {
+  width: 200px;
+  height: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  background-color: #6666FF;
+}
+.cart_btn1:hover {
+  opacity: 0.9;
+}
+.cart_btn2 {
+  width: 200px;
+  height: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  float: right;
+  border: none;
+  cursor: pointer;
+  background-color: #FF4D4D;
+}
+.cart_btn2:hover {
+  opacity: 0.9;
+}
+
+
+/* 購入確認ページ */
+.check_text {
+  width: 1000px;
+  height: 300px;
+  margin: 0 auto;
+  overflow: auto;
+  border-radius:9px;
+  background-color: #ffffef;
+}
+.check_text p {
+  margin-top: 100px;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* フッター */
+.footer {
+  width: auto;
+  height: 130px;
+  border-top: 1px dotted #333;
+  background-color: #fff;
+}
+.footer p {
+  font-size: 14px;
+  position: relative;
+  top: 40%;
+  text-align: center;
+}
